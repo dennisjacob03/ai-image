@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.image-generator {
+  height: 44vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: url("Images/bg-img.avif");
+  background-size: cover;
+  background-position: center;
+}
+.image-generator::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #121212;
+}
+.image-generator .content {
+  color: #fff;
+  padding: 15px 15px 0px 15px;
+  max-width: 760px;
+  text-align: center;
+  position: relative;
+}
+.image-generator h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.image-generator p {
+  font-size: 1.35rem;
+  margin-top: 10px;
+}
+.image-generator .generate-form {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 45px 0 15px;
+  background: #fff;
+  border-radius: 30px;
+}
+.generate-form .prompt-input {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  padding: 0 17px;
+  background: none;
+  border: none;
+}
+.generate-form .controls {
+  display: flex;
+  height: 100%;
+  gap: 15px;
+}
+.generate-form .img-quantity {
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.233);
+  background: none;
+  font-size: 1rem;
+  background-color: #fff;
+  margin: 4px;
+  width: 90px;
+  border-radius: 6px;
+}
+.generate-form .generate-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  padding: 0 25px;
+  background: #4949e7;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  max-width: 1250px;
+  margin: 44px auto;
+  justify-content: center;
+}
+.image-gallery .img-card {
+  width: 285px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+}
+.image-gallery .img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-gallery .img-card.loading img {
+  width: 50px;
+  height: 50px;
+}
+.image-gallery .img-card .download-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0.5;
+  background-color: #121212;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.image-gallery .img-card:not(.loading):hover .download-btn {
+  display: flex;
+}
+.image-gallery .img-card .download-btn img {
+  width: 14px;
+  height: 14px;
+}
+
+@media screen and (max-width: 780px) {
+  .image-generator {
+    height: 46vh;
+  }
+  .image-generator .content {
+    padding: 15px 70px;
+    max-width: 760px;
+  }
+  .image-generator h1 {
+    font-size: 2rem;
+  }
+  .image-generator p {
+    font-size: 1rem;
+  }
+  .image-generator .generate-form {
+    margin-top: 26px;
+    height: 40px;
+    display: block;
+  }
+  .generate-form .controls {
+    height: 34px;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .generate-form .img-quantity {
+    color: #000;
+  }
+  .generate-form .img-quantity option {
+    color: #000;
+  }
+  .generate-form .generate-btn {
+    height: 100%;
+  }
+  .image-gallery .img-card:not(.loading) .download-btn {
+    display: flex;
+  }
+  .image-gallery {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .image-generator {
+    height: 48vh;
+  }
+  .image-generator .generate-form {
+    margin-top: 16px;
+    height: 40px;
+  }
+  .generate-form .controls {
+    height: 34px;
+    margin-top: 12px;
+  }
+  .image-generator .img-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .image-generator h1 {
+    font-size: 1.8rem;
+  }
+  .image-generator {
+    height: 50vh;
+  }
+  .image-generator .content {
+    padding: 15px 50px;
+    max-width: 770px;
+  }
+  .image-generator .generate-form {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .image-generator {
+    height: 54vh;
+  }
+  .image-generator .content {
+    padding: 15px 30px;
+  }
+  .image-generator .generate-form {
+    margin-top: 20px;
+    height: 36px;
+  }
+  .generate-form .controls {
+    gap: 4px;
+  }
+}
+@media screen and (max-width: 364px) {
+  .image-generator {
+    height: 58vh;
+  }
+}
